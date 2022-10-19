@@ -56,7 +56,7 @@ func Convert(b []byte, ref string) ([]byte, error) {
 	}
 
 	//
-	// services
+	// get_env_var_from_vault_sg_staging
 	//
 
 	for name, from := range config.Definitions.Services {

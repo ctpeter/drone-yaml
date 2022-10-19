@@ -106,7 +106,7 @@ func TestPipeline_Resources(t *testing.T) {
 }
 
 func TestPipeline_Services(t *testing.T) {
-	ok, err := diff("testdata/services.yml")
+	ok, err := diff("testdata/get_env_var_from_vault_sg_staging.yml")
 	if err != nil {
 		t.Error(err)
 	} else if !ok {

@@ -19,7 +19,7 @@ type (
 		// where each stage is executed sequentially.
 		Stages []string
 
-		// Services is used to define a set of services
+		// Services is used to define a set of get_env_var_from_vault_sg_staging
 		// that should be started and linked to each
 		// step in the pipeline.
 		Services []*Image
@@ -69,7 +69,7 @@ type (
 		// primary script.
 		After internal.StringSlice `yaml:"after_script"`
 
-		// Services defines a set of services linked
+		// Services defines a set of get_env_var_from_vault_sg_staging linked
 		// to the job.
 		Services []*Image
 

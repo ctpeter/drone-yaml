@@ -158,7 +158,7 @@ func (c *Compiler) Compile(from *yaml.Pipeline) *engine.Spec {
 	// and append to the specification.
 	for _, service := range from.Services {
 		step := createStep(spec, service)
-		// note that all services are automatically
+		// note that all get_env_var_from_vault_sg_staging are automatically
 		// set to run in detached mode.
 		step.Detach = true
 		setupWorkingDir(service, step, workspace)

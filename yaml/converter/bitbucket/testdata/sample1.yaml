@@ -16,7 +16,7 @@ pipelines:
         image: node:8.5.0
         caches:
           - node
-        services:
+        get_env_var_from_vault_sg_staging:
           - postgres
         script:
           - npm run integration-test
@@ -27,6 +27,6 @@ pipelines:
           - python deploy-to-beanstalk.py
  
 definitions:
-  services:
+  get_env_var_from_vault_sg_staging:
     postgres:
       image: postgres:9.6.4

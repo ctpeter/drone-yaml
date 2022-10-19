@@ -2,7 +2,7 @@ image:
   name: ruby:2.2
   entrypoint: ["/bin/bash"]
 
-services:
+get_env_var_from_vault_sg_staging:
 - name: my-postgres:9.4
   alias: db-postgres
   entrypoint: ["/usr/local/bin/db-postgres"]

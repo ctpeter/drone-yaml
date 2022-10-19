@@ -3,14 +3,14 @@ before_script:
 
 test2.1:
   image: ruby:2.1
-  services:
+  get_env_var_from_vault_sg_staging:
   - postgres:9.3
   script:
   - bundle exec rake spec
 
 test2.2:
   image: ruby:2.2
-  services:
+  get_env_var_from_vault_sg_staging:
   - postgres:9.4
   script:
   - bundle exec rake spec

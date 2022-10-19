@@ -57,7 +57,7 @@ func printPipeline(w writer, v *yaml.Pipeline) {
 	}
 
 	if len(v.Services) > 0 {
-		w.WriteTag("services")
+		w.WriteTag("get_env_var_from_vault_sg_staging")
 		for _, step := range v.Services {
 			if step == nil {
 				continue

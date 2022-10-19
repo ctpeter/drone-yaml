@@ -24,7 +24,7 @@ steps:
   commands:
   - python deploy-to-beanstalk.py
 
-services:
+get_env_var_from_vault_sg_staging:
 - name: postgres
   image: postgres:9.6.4
 

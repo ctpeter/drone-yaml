@@ -13,7 +13,7 @@ steps:
   - bundle install
   - bundle exec rake spec
 
-services:
+get_env_var_from_vault_sg_staging:
 - name: postgres
   image: postgres:9.3
 

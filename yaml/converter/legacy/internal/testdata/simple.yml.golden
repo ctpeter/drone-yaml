@@ -56,7 +56,7 @@ steps:
     SLACK_TOKEN:
       from_secret: token
 
-services:
+get_env_var_from_vault_sg_staging:
 - name: database
   pull: if-not-exists
   image: mysql

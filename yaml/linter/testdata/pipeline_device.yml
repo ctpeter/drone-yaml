@@ -12,7 +12,7 @@ steps:
   - name: data
     path: /dev/xvda
 
-services:
+get_env_var_from_vault_sg_staging:
 - name: database
   image: redis
   ports:

@@ -193,22 +193,22 @@ func Convert(d []byte, remote string) ([]byte, error) {
 			current := pipeline
 			current.Name = fmt.Sprintf("matrix-%d", index+1)
 
-			services := make([]*droneyaml.Container, 0)
+			get_env_var_from_vault_sg_staging := make([]*droneyaml.Container, 0)
 			for _, service := range current.Services {
 				if len(service.When.Matrix) == 0 {
-					services = append(services, service)
+					get_env_var_from_vault_sg_staging = append(get_env_var_from_vault_sg_staging, service)
 					continue
 				}
 
 				for whenKey, whenValue := range service.When.Matrix {
 					for envKey, envValue := range environ {
 						if whenKey == envKey && whenValue == envValue {
-							services = append(services, service)
+							get_env_var_from_vault_sg_staging = append(get_env_var_from_vault_sg_staging, service)
 						}
 					}
 				}
 			}
-			current.Services = services
+			current.Services = get_env_var_from_vault_sg_staging
 
 			steps := make([]*droneyaml.Container, 0)
 			for _, step := range current.Steps {

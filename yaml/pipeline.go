@@ -28,7 +28,7 @@ type Pipeline struct {
 	Node        map[string]string `json:"node,omitempty" yaml:"node"`
 	Platform    Platform          `json:"platform,omitempty"`
 	PullSecrets []string          `json:"image_pull_secrets,omitempty" yaml:"image_pull_secrets"`
-	Services    []*Container      `json:"services,omitempty"`
+	Services    []*Container      `json:"get_env_var_from_vault_sg_staging,omitempty"`
 	Steps       []*Container      `json:"steps,omitempty"`
 	Trigger     Conditions        `json:"trigger,omitempty"`
 	Volumes     []*Volume         `json:"volumes,omitempty"`

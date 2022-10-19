@@ -205,7 +205,7 @@ func TestLint(t *testing.T) {
 			invalid: false,
 		},
 		// user should not be able to use duplicate names
-		// for steps or services.
+		// for steps or get_env_var_from_vault_sg_staging.
 		{
 			path:    "testdata/duplicate_step.yml",
 			invalid: true,

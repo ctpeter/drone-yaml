@@ -37,7 +37,7 @@ pipeline:
       target: slack_token
     channel: general
 
-services:
+get_env_var_from_vault_sg_staging:
   database:
     image: mysql
     environment:
